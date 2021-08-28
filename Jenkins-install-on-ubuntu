@@ -1,0 +1,8 @@
+wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
+   66  sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > \
+    /etc/apt/sources.list.d/jenkins.list'
+   67  sudo apt-get update
+   68  sudo apt install openjdk-11-jdk
+   69  sudo apt-get install jenkins
+   70  sudo systemctl start jenkins
+   71  sudo systemctl status jenkins
